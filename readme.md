@@ -173,7 +173,7 @@ Edit the configuration file:
 nano fineract-provider/src/main/resources/application.properties
 ```
 
-**MySQL Configuration (Updated for working setup):**
+**MySQL Configuration (Updated for working setup), Don't forget to use your own configuration that suits your own setup:**
 ```properties
 # Database Configuration
 spring.datasource.hikari.driverClassName=com.mysql.cj.jdbc.Driver
