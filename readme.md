@@ -92,6 +92,32 @@ ng serve --proxy-config proxy.conf.js --open
 
 ---
 
+## 🚀 Automated Setup (Recommended)
+
+For a quick automated setup, use the provided setup script:
+
+```bash
+# Make the script executable
+chmod +x setup.sh
+
+# Run the automated setup
+./setup.sh
+```
+
+This script will:
+- ✅ Check all prerequisites (Java 17+, MySQL 8.0+, Node.js 18+)
+- ✅ Create required databases (`fineract_tenants`, `fineract_default`)
+- ✅ Generate SSL certificate
+- ✅ Build the backend JAR file
+- ✅ Install frontend dependencies
+- ✅ Configure environment files
+
+**Note:** The script will prompt for your MySQL root password (press Enter if no password).
+
+---
+
+## 📋 Manual Setup (Alternative)
+
 ### Prerequisites
 
 Ensure you have the following installed:

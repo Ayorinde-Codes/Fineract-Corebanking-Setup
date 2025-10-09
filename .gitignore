@@ -1,0 +1,188 @@
+# Fineract Core Banking Setup - Git Ignore File
+
+# ===========================================
+# Build Artifacts & Compiled Files
+# ===========================================
+*.jar
+*.war
+*.ear
+*.class
+build/
+target/
+out/
+dist/
+bin/
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# ===========================================
+# Frontend (Node.js/Angular)
+# ===========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Angular
+.angular/
+coverage/
+.nyc_output
+
+# ===========================================
+# IDE & Editor Files
+# ===========================================
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ===========================================
+# Operating System Files
+# ===========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================================
+# Database & Configuration Files
+# ===========================================
+# SSL Certificates (should be regenerated)
+*.jks
+*.p12
+*.pem
+*.key
+*.crt
+*.csr
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+log/
+
+# ===========================================
+# Environment & Secrets
+# ===========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Application properties with secrets
+application-*.properties
+!application.properties
+!application-test.properties
+
+# ===========================================
+# Temporary & Cache Files
+# ===========================================
+*.tmp
+*.temp
+*.cache
+.cache/
+.tmp/
+.temp/
+
+# Java
+hs_err_pid*
+replay_pid*
+
+# ===========================================
+# Documentation & Reports
+# ===========================================
+# Generated documentation
+docs/generated/
+api-docs/
+
+# Test reports
+test-results/
+coverage/
+allure-results/
+
+# ===========================================
+# Docker & Deployment
+# ===========================================
+docker-compose.override.yml
+.dockerignore
+
+# ===========================================
+# Backup Files
+# ===========================================
+*.backup
+*.bak
+*.old
+*.orig
+
+# ===========================================
+# Custom Project Files
+# ===========================================
+# Add any project-specific files to ignore here
+# Example:
+# custom-config/
+# local-data/
