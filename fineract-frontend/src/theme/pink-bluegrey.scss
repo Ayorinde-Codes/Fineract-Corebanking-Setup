@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+$pink-bluegrey-color-config: (
+  primary: mat.define-palette(mat.$pink-palette, 500, 300, 700),
+  accent: mat.define-palette(mat.$blue-grey-palette, 400, 200, 600),
+  warn: mat.define-palette(mat.$red-palette)
+);
+
+$pink-bluegrey-theme: mat.define-light-theme(
+  (
+    color: $pink-bluegrey-color-config
+  )
+);
+
+.pink-bluegrey-theme {
+  @include mat.all-component-colors($pink-bluegrey-theme);
+}

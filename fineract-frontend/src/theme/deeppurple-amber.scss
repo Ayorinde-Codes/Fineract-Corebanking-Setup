@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+$deeppurple-amber-color-config: (
+  primary: mat.define-palette(mat.$deep-purple-palette, 500, 300, 700),
+  accent: mat.define-palette(mat.$amber-palette, 400, 200, 600),
+  warn: mat.define-palette(mat.$red-palette)
+);
+
+$deeppurple-amber-theme: mat.define-light-theme(
+  (
+    color: $deeppurple-amber-color-config,
+    density: 0
+  )
+);
+
+.deeppurple-amber-theme {
+  @include mat.all-component-colors($deeppurple-amber-theme);
+}

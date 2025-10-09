@@ -1,0 +1,13 @@
+<span *ngIf="accountTitle">
+  <div [ngClass]="withTitle" class="header">
+    {{ 'labels.inputs.' + accountTitle | translate }}
+  </div>
+
+  <div [ngClass]="withAccount">
+    {{ glAccountValue() }}
+  </div>
+</span>
+
+<div class="flex-100" *ngIf="!accountTitle">
+  {{ glAccountValue() }}
+</div>

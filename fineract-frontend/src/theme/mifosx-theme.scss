@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+
+// Custom material palette
+@use 'material-palette' as *;
+
+// Plus imports for other components in your app.
+@use '../app/groups/groups-view/groups-view.component-theme.scss' as *;
+@use '../app/centers/centers-view/centers-view.component-theme.scss' as *;
+@use '../app/home/dashboard/dashboard.component-theme.scss' as *;
+@use '../app/shares/shares-account-view/shares-account-view.component-theme.scss' as *;
+@use 'content' as *;
+@use 'dark_content' as *;
+
+@include mat.all-component-typographies();
+@include mat.core();
+
+/* ################################## Light theme ################################### */
+
+$mifosx-color-config: (
+  primary: mat.define-palette($primary-palette),
+  accent: mat.define-palette($accent-palette),
+  warn: mat.define-palette(mat.$red-palette)
+);
+
+$mifosx-typography: mat.define-typography-config();
+$mifosx-density: 0;
+
+$mifosx-app-theme: mat.define-light-theme(
+  (
+    color: $mifosx-color-config,
+    typography: $mifosx-typography,
+    density: $mifosx-density
+  )
+);
+
+@include mat.typography-hierarchy($mifosx-typography);
+@include mat.all-component-themes($mifosx-app-theme);
+@include groups-view-component-theme($mifosx-app-theme);
+@include centers-view-component-theme($mifosx-app-theme);
+@include dashboard-component-theme($mifosx-app-theme);
+@include shares-account-view-component-theme($mifosx-app-theme);
+@include account-view-component-theme($mifosx-app-theme);
+
+/* ################################## Dark theme ################################### */
+
+$mifosx-dark-color-config: (
+  primary: mat.define-palette($dark-primary-palette),
+  accent: mat.define-palette($dark-accent-palette),
+  warn: mat.define-palette(mat.$red-palette)
+);
+
+$mifosx-app-dark-theme: mat.define-dark-theme(
+  (
+    color: $mifosx-dark-color-config
+  )
+);
+
+.dark-theme {
+  @include mat.all-component-colors($mifosx-app-dark-theme);
+  @include groups-view-component-theme($mifosx-app-dark-theme);
+  @include centers-view-component-theme($mifosx-app-dark-theme);
+  @include dashboard-component-theme($mifosx-app-dark-theme);
+  @include shares-account-view-component-theme($mifosx-app-dark-theme);
+  @include account-view-component-dark-theme($mifosx-app-dark-theme);
+}
