@@ -186,4 +186,3 @@ docker-compose.override.yml
 # Example:
 # custom-config/
 # local-data/
-branch_structure.json
